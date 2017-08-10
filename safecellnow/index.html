@@ -12,6 +12,8 @@
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/custom.css" />
+		<script type="text/javascript" src="https://use.fontawesome.com/dd65da9442.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 	</head>
@@ -101,36 +103,108 @@
 					<section id="three" class="wrapper style3 special">
 						<div class="inner">
 							<header class="major">
-								<h2>Accumsan mus tortor nunc aliquet</h2>
+								<h2>The Dangers of Distracted Driving</h2>
 								<p>Aliquam ut ex ut augue consectetur interdum. Donec amet imperdiet eleifend<br />
 								fringilla tincidunt. Nullam dui leo Aenean mi ligula, rhoncus ullamcorper.</p>
 							</header>
 							<ul class="features">
-								<li class="icon fa-paper-plane-o">
-									<h3>Arcu accumsan</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
+								<li class="icon fa-users">
+									<h3>A Widespread Problem</h3>
+									<p>43% of teens admit to texting while driving</p>
 								</li>
-								<li class="icon fa-laptop">
-									<h3>Ac Augue Eget</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
+								<li class="icon fa-user-circle-o">
+									<h3>Not only youth</h3>
+									<p>77% of teenagers say their parents text while driving</p>
 								</li>
-								<li class="icon fa-code">
-									<h3>Mus Scelerisque</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
+								<li class="icon fa-exclamation-triangle">
+									<h3>The Risk</h3>
+									<p>Texting while driving makes a crash 23 times as likely</p>
 								</li>
-								<li class="icon fa-headphones">
-									<h3>Mauris Imperdiet</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
+								<li class="icon fa-hand-paper-o">
+									<h3>Laws Haven't Worked</h3>
+									<p>Scare tactics and even laws are not effective in preventing distracted driving. Even more grim, people know the effects of their actions and continue the habit</p>
 								</li>
 								<li class="icon fa-heart-o">
-									<h3>Aenean Primis</h3>
+									<h3>A Growing Problem</h3>
 									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
 								</li>
 								<li class="icon fa-flag-o">
-									<h3>Tortor Ut</h3>
+									<h3>Minimal Improvement</h3>
 									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
 								</li>
 							</ul>
+							<canvas id="canvas" width="400" height="200"></canvas>
+<script>
+        var REACTIONS = ["Drink-Drive Limit", "High on Cannabis", "Talking with Hands-Free Device","Texting"];
+        var color = Chart.helpers.color;
+        var horizontalBarChartData = {
+            labels: ["Drink-Drive Limit", "High on Cannabis", "Talking with Hands-Free Device","Texting"],
+            datasets: [{
+                label: 'Dataset 1',
+                backgroundColor: "rgb(200,0,0)",
+                borderColor: "rgb(200,0,0)",
+                borderWidth: 1,
+                data: [
+                    13,
+                    21,
+                    27,
+                    37
+
+                ]
+            }]
+
+        };
+
+        window.onload = function() {
+            var ctx = document.getElementById("canvas").getContext("2d");
+            window.myHorizontalBar = new Chart(ctx, {
+                type: 'horizontalBar',
+                data: horizontalBarChartData,
+                options: {
+                    // Elements options apply to all of the options unless overridden in a dataset
+                    // In this case, we are setting the border of each horizontal bar to be 2px wide
+                    elements: {
+                        rectangle: {
+                            borderWidth: 2,
+                        }
+                    },
+                    responsive: true,
+                    legend: {
+                        position: 'right',
+                    },
+                    scales: {
+			            yAxes: [{
+			                ticks: {
+			                    fontColor: "white",
+			                    fontSize: 18,
+			                    stepSize: 1,
+			                    beginAtZero: true
+			                }
+			            }],
+			            xAxes: [{
+			                ticks: {
+			                    fontColor: "white",
+			                    fontSize: 14,
+			                    stepSize: 1,
+			                    beginAtZero: true
+			                }
+			            }]
+			        },
+                    title: {
+                        display: true,
+                        fontColor:"white",
+
+
+                        text: 'How Are Reactions Slow'
+                    }
+                }
+            });
+
+        };
+
+     
+
+    </script>
 						</div>
 					</section>
 
