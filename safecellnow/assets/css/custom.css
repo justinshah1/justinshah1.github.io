@@ -1,1 +1,123 @@
-h2{}
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
+
+body{
+	background-color: rgb(237, 237, 237);
+}
+
+#pricing{
+	width: 989px;
+	margin: 100px auto;
+	font-family: 'Open Sans', Helvetica;
+}
+
+#pricing .price_card{
+	width: 290px;
+	background: rgb(255, 255, 255);
+	display: inline-table;
+	top: 0;
+	border: 1px solid #ccc;
+}
+#pricing .price_card:not(:last-child){
+	margin-right: 40px;
+
+}
+#pricing .header{
+	color: rgb(255, 255, 255);
+	padding-top: 20px;
+
+}
+#pricing .alpha .header{
+	background: rgb(245, 166, 35);
+}
+#pricing .bravo .header{
+	background: rgb(246, 77, 77);
+}
+#pricing .charlie .header{
+	background: rgb(48, 219, 181);
+}
+/*#pricing .price{
+	width: 100%;
+	font-size: 60px;
+	font-weight: 300;
+	display: block;
+	text-align: center;
+	padding: 30px 0 10px;
+}*/
+
+#pricing .name{
+	width: 100%;
+	font-size: 15px;
+	font-weight: 700;
+	display: block;
+	text-align: center;
+	padding: 0 0 30px;
+}
+#pricing .features{
+	list-style: none;
+	text-align: center;
+	color: rgb(138, 138, 138);
+	margin: 0;
+	padding: 0;
+}
+#pricing .features li{
+	margin: 0 35px;
+	padding: 20px 15px;
+	width: 200px;
+	background-color: white;
+
+}
+#pricing .features h4 {
+	text-align: left;
+
+}
+#pricing .features ul {
+	padding: 0;
+	margin: 0;
+
+}
+#pricing .features ul li {
+	background-color: none;
+	padding: 2px;
+	margin:0;
+	margin-left: 15px;
+	border: 0 !important;
+	text-align: left;
+
+}
+
+
+#pricing .features li:not(:last-child){
+	border: 1px solid rgb(242, 242, 242);
+	border-top: 0;
+	border-left: 0;
+	border-right: 0;
+}
+#pricing button{
+	color: rgb(255, 255, 255);
+	border: 0;
+	border-radius: 5px;
+	height: 40px;
+	width: 200px;
+	display: block;
+	font-weight: 700;
+	font-size: 15px;
+	text-transform: uppercase;
+	margin: 20px auto 35px;
+	letter-spacing: .5px;
+}
+#pricing .alpha button{
+	background: rgb(245, 166, 35);
+}
+#pricing .bravo button{
+	background: rgb(246, 77, 77);
+}
+#pricing .charlie button{
+	background: rgb(48, 219, 181);
+}
+/*#pricing .tip{
+	font-family: 'Indie Flower';
+	position: absolute;
+	color: rgb(117, 117, 117);
+	margin: 10px 5px;
+}*/
